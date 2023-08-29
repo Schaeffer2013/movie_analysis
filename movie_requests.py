@@ -2,30 +2,35 @@ import requests
 from keys import api_key
 import csv
 import re
+import pandas as pd
 
 
-res = requests.get(f"http://www.omdbapi.com/?&apikey={api_key}")
-data = res.json()
-id = data['imdbID']
-title = str(data['Title'])
-time = int(data['Runtime'])
-genre = str(data['Genre'])
-wins = int(data['Awards'])
-noms = int(data['Awards'])
-office = int(data['BoxOffice'])
-res = requests.get(f"http://www.omdbapi.com?i={id}&apikey={api_key}")
-print(data)
-
-
-headers = ['Movie Title', 'Runtime', 'Genre', 'Award Wins', 'Award Nominations', 'Box Office']
-info = ['Movie Title', 'Runtime', 'Genre', 'Award Wins', 'Award Nominations', 'Box Office']
+csv_data = pd.read_csv("oscar_winners.csv")
+csv_id = csv_data['IMDB']
 
 def movie_res():
     with open('oscar_winners.csv', 'a') as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(headers)
-            writer.writerow(info)
+            rows = csv.DictReader(csvfile)
+            headers = ['Movie Title', 'Runtime', 'Genre', 'Award Wins', 'Award Nominations', 'Box Office']
 
+            with open('movies.csv', 'a') as f:
+                writer = csv.writer(f)
+                writer.writerow(headers)
+
+            for row in rows:
+                res = requests.get(f"http://www.omdbapi.com?apikey={api_key}&i={movie_id}")
+                api_data = res.json() 
+                movie_id = int(api_data['imdbID'])
+                title = str(api_data['Title'])
+                time = int(api_data['Runtime'])
+                genre = str(api_data['Genre'].split(", "))
+                wins = int(api_data['Awards'])
+                noms = int(api_data['Awards'])
+                office = int(api_data['BoxOffice'])
+            
+
+
+                info = [title, time, genre, wins, noms, office]
   
 
 
