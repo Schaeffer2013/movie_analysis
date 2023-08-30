@@ -8,13 +8,8 @@ def movie_res():
     with open('oscar_winners.csv', 'r') as csvfile:
             rows = csv.DictReader(csvfile)
             headers = ['Movie Title', 'Runtime', 'Genre', 'Award Wins', 'Award Nominations', 'Box Office', 'Rated', 'Language','Director']
-            movie_choices = [
-                 "tt2278388",
-                 "tt0109830",
-                 "tt1375666",
-                 "tt0120689",
-                 "tt2380307"
-            ]
+       
+
             with open('movies.csv', 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow(headers)
@@ -39,9 +34,7 @@ def movie_res():
             
                 info = [title, time, genre, wins, noms, office, rated, lang, director]
                 
-                with open('movies.csv', 'a', newline='', encoding='utf-8') as f:
-                     writer = csv.writer(f)
-                     writer.writerow([info])
+                
 
 movie_res()
   
