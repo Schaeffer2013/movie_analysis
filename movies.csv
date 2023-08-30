@@ -1,2 +1,16 @@
-Movie Title,Runtime,Genre,Award Wins,Award Nominations,Box Office,Rated,Language,Director
-Coco,105,"['Animation', 'Adventure', 'Drama']",2,109,210460015,PG,"['English', 'Spanish']","Lee Unkrich, Adrian Molina"
+Movie Title,Runtime,Genre,Award Wins,Award Nominations,Total NominationsBox Office,Rated,Language,Director
+Parasite,132,"['Drama', 'Thriller']",4,306,310,53369749,R,"['Korean', 'English']",Bong Joon Ho
+Green Book,130,"['Biography', 'Comedy', 'Drama']",3,58,61,85080171,PG-13,"['English', 'Italian', 'Russian', 'German']",Peter Farrelly
+The Shape of Water,123,"['Drama', 'Fantasy', 'Romance']",4,136,140,63859435,R,"['English', 'American Sign ', 'Russian', 'French']",Guillermo del Toro
+Moonlight,111,['Drama'],3,231,234,27854932,R,['English'],Barry Jenkins
+Spotlight,129,"['Biography', 'Crime', 'Drama']",2,124,126,45055776,R,['English'],Tom McCarthy
+Birdman or (The Unexpected Virtue of Ignorance),119,"['Comedy', 'Drama']",4,192,196,42340598,R,['English'],Alejandro G. Iñárritu
+12 Years a Slave,134,"['Biography', 'Drama', 'History']",3,242,245,56671993,R,['English'],Steve McQueen
+Argo,120,"['Biography', 'Drama', 'Thriller']",3,95,98,136025503,R,"['English', 'Persian', 'German', 'Arabic']",Ben Affleck
+The Artist,100,"['Comedy', 'Drama', 'Romance']",5,162,167,44671682,PG-13,"['English', 'French']",Michel Hazanavicius
+The King's Speech,118,"['Biography', 'Drama', 'History']",4,108,112,138797449,R,['English'],Tom Hooper
+The Grand Budapest Hotel,99,"['Adventure', 'Comedy', 'Crime']",4,135,139,59301324,R,"['English', 'French', 'German']",Wes Anderson
+Forrest Gump,142,"['Drama', 'Romance']",6,50,56,330455270,PG-13,['English'],Robert Zemeckis
+Inception,148,"['Action', 'Adventure', 'Sci-Fi']",4,159,163,292587330,PG-13,"['English', 'Japanese', 'French']",Christopher Nolan
+The Green Mile,189,"['Crime', 'Drama', 'Fantasy']",4,15,19,136801374,R,"['English', 'French']",Frank Darabont
+Coco,105,"['Animation', 'Adventure', 'Drama']",2,109,111,210460015,PG,"['English', 'Spanish']","Lee Unkrich, Adrian Molina"
