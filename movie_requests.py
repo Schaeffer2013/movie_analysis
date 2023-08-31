@@ -20,7 +20,7 @@ def movie_res():
                     api_data = res.json() 
                     title = str(api_data['Title'])
                     time = int(api_data['Runtime'].split(" ")[0])
-                    genre = str(api_data['Genre'].split(", "))
+                    genre = str(api_data['Genre'])
                     awards = re.findall(r'\d+', api_data['Awards'])
                     wins = int(awards[0]) if awards else 0
                     noms = int(awards[1]) if len(awards) > 1 else 0
@@ -35,8 +35,7 @@ def movie_res():
                     info = [title, time, genre, wins, noms, office, rated, lang, director]
                     with open('movies.csv', 'w', newline='', encoding='utf-8') as f:
                         writer.writerow(info)
-                    
-                    
+                     
                 
                 
 
