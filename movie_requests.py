@@ -35,7 +35,7 @@ def movie_res():
                     info = [title, time, genre, wins, noms, office, rated, lang, director]
                     with open('movies.csv', 'w', newline='', encoding='utf-8') as f:
                         writer.writerow(info)
-                    print(api_data)
+                    
                     
                 
                 
